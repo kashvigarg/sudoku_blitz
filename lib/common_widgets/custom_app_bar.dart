@@ -8,9 +8,9 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      actions: [
-        IconButton(onPressed: () {}, icon: const Icon(Icons.restart_alt))
-      ],
+      // actions: [
+      //   IconButton(onPressed: () {}, icon: const Icon(Icons.restart_alt))
+      // ],
       centerTitle: true,
       elevation: 0,
       foregroundColor: Colors.black,

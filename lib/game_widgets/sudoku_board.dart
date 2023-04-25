@@ -12,7 +12,11 @@ class SudokuBoard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Table(
-        border: TableBorder.all(color: Colors.black),
+        border: const TableBorder(
+            left: BorderSide(color: Colors.black, width: 2.5),
+            right: BorderSide(color: Colors.black, width: 2.5),
+            top: BorderSide(color: Colors.black, width: 2.5),
+            bottom: BorderSide(color: Colors.black, width: 2.5)),
         defaultVerticalAlignment: TableCellVerticalAlignment.middle,
         children: getRows,
       ),
@@ -23,6 +27,17 @@ class SudokuBoard extends StatelessWidget {
 List<TableRow> getRows =
     List.generate(9, (int rowNumber) => TableRow(children: getRow(rowNumber)));
 
-List<SudokuCell> getRow(int rowNumber) {
-  return List.generate(9, (int colNumber) => SudokuCell(rowNumber, colNumber));
+List<Widget> getRow(int rowNumber) {
+  return List.generate(
+      9,
+      (int colNumber) => Container(
+          decoration: BoxDecoration(
+              border: Border(
+                  right: BorderSide(
+                      color: Colors.black,
+                      width: colNumber % 3 == 2 ? 2.5 : 0.8),
+                  bottom: BorderSide(
+                      color: Colors.black,
+                      width: rowNumber % 3 == 2 ? 2.5 : 0.8))),
+          child: SudokuCell(rowNumber, colNumber)));
 }
