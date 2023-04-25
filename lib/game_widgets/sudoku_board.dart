@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:sudoku_blitz/content/difficulty.dart';
-import 'package:sudoku_blitz/content/sudoku_cell.dart';
+import 'package:sudoku_blitz/game_config/difficulty.dart';
+import 'package:sudoku_blitz/game_widgets/sudoku_cell.dart';
 
 class SudokuBoard extends StatelessWidget {
   const SudokuBoard({super.key, required Difficulty difficulty});

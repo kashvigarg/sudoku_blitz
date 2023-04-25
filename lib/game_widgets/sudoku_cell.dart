@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:sudoku_blitz/content/content.dart';
-import 'package:sudoku_blitz/content/difficulty.dart';
+import 'package:sudoku_blitz/game_config/content.dart';
+import 'package:sudoku_blitz/game_config/difficulty.dart';
 
 class SudokuCell extends ConsumerWidget {
   SudokuCell(this.row, this.column);

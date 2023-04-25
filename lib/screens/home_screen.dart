@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sudoku_blitz/common_widgets/custom_app_bar.dart';
-import 'package:sudoku_blitz/content/difficulty.dart';
-import 'package:sudoku_blitz/content/sudoku_board.dart';
+import 'package:sudoku_blitz/game_config/difficulty.dart';
+import 'package:sudoku_blitz/game_widgets/sudoku_board.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
