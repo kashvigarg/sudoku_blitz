@@ -7,10 +7,13 @@ import 'package:sudoku_blitz/game_widgets/sudoku_cell.dart';
 class SudokuBoard extends StatelessWidget {
   const SudokuBoard({super.key, required Difficulty difficulty});
 
+  final rows = 9;
+  final cols = 9;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(30.0),
       child: Table(
         border: const TableBorder(
             left: BorderSide(color: Colors.black, width: 2.5),

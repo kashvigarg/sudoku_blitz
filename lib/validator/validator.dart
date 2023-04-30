@@ -25,8 +25,12 @@ bool isValidGrid(int row, int col, int val, List<List<int>> game) {
 }
 
 bool validator(int row, int col, int val, List<List<int>> game) {
-  if (isValidGrid(row, col, val, game) &&
-      isValidRow(row, col, val, game) &&
-      isValidColumn(row, col, val, game)) return true;
+  for (int i = 0; i < 9; i++) {
+    for (int j = 0; j < 9; j++) {
+      if (isValidGrid(i, j, val, game) &&
+          isValidRow(i, j, val, game) &&
+          isValidColumn(i, j, val, game)) return true;
+    }
+  }
   return false;
 }

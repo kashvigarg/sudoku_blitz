@@ -4,7 +4,7 @@ import 'package:sudoku_blitz/screens/home_screen.dart';
 import 'package:sudoku_blitz/screens/main_screen.dart';
 
 void main() {
-  runApp(ProviderScope(child: const MyApp()));
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
