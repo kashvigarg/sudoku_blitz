@@ -3,6 +3,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:sudoku_blitz/app_constants/app_themes.dart';
 import 'package:sudoku_blitz/game_config/difficulty.dart';
 import 'package:sudoku_blitz/screens/alas_screen.dart';
+import 'package:sudoku_blitz/screens/congrats_screen.dart';
 import 'package:sudoku_blitz/screens/level_screen.dart';
 import 'package:sudoku_blitz/screens/main_screen.dart';
 
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
       },
       theme: AppThemes.appTheme,
       debugShowCheckedModeBanner: false,
-      home: const MainScreen(),
+      home: CongratsScreen(time: 10),
     );
   }
 }

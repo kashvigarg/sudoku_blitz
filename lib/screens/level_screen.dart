@@ -73,12 +73,3 @@ Widget hardButton(BuildContext context) => TextButton(
         textScaleFactor: 2,
       ),
     );
-
-// Text(
-//             "SUDOKU\nBLITZ",
-//             textAlign: TextAlign.center,
-//             style: TextStyle(
-//                 foreground: Paint()..shader = AppColors.titleColor,
-//                 fontWeight: FontWeight.bold),
-//             textScaleFactor: 3.2,
-//           ),

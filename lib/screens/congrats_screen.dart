@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:sudoku_blitz/app_constants/app_colors.dart';
+import 'package:sudoku_blitz/app_constants/app_config.dart';
 import 'package:sudoku_blitz/app_constants/app_strings.dart';
 
 class CongratsScreen extends StatelessWidget {
@@ -15,21 +17,39 @@ class CongratsScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image.asset(
-                'assets/images/win.png',
-                fit: BoxFit.contain,
+              Text(
+                "EASY",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    foreground: Paint()..shader = AppColors.easyTitleColor,
+                    fontWeight: FontWeight.bold),
+                textScaleFactor: 3.2,
+              ),
+              CircleAvatar(
+                child: Image.asset(
+                  'assets/images/win.png',
+                  fit: BoxFit.contain,
+                ),
+                maxRadius: safeWidth * 0.3,
+                backgroundColor: AppColors.secondaryBg,
               ),
               Text(
-                str,
+                "Total Time: $time s",
                 style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30,
-                ),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                    color: AppColors.white),
                 softWrap: true,
                 textAlign: TextAlign.center,
-              )
+              ),
+              ElevatedButton(
+                  onPressed: () {},
+                  child: const Text(
+                    "NEXT",
+                    textScaleFactor: 1.3,
+                  ))
             ],
           ),
         ),
