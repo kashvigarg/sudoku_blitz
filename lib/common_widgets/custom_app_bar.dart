@@ -12,13 +12,16 @@ class CustomAppBar extends StatelessWidget {
       //   IconButton(onPressed: () {}, icon: const Icon(Icons.restart_alt))
       // ],
       centerTitle: true,
+      leading: IconButton(
+          onPressed: Navigator.of(context).pop,
+          icon: Icon(Icons.arrow_back_rounded)),
       elevation: 0,
-      foregroundColor: Colors.black,
+      foregroundColor: Colors.white,
       backgroundColor: Colors.transparent,
-      title: const Text(
-        "Sudoku 2.0",
-        style: TextStyle(color: Colors.black),
-      ),
+      // title: const Text(
+      //   "Sudoku 2.0",
+      //   style: TextStyle(color: Colors.black),
+      // ),
     );
   }
 }

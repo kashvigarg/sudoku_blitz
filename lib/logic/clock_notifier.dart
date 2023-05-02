@@ -7,17 +7,18 @@ class Clock extends ChangeNotifier {
   int time = 0;
 
   void begin() {
+    if (onStart = false) time = 0;
     onStart = true;
-    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+    _timer = Timer.periodic(const Duration(seconds: 2), (timer) {
       time++;
       notifyListeners();
     });
   }
 
   int end() {
+    time = 0;
     int curr = time;
     _timer.cancel();
-    time = 0;
     onStart = false;
     return curr;
   }
